@@ -1,0 +1,85 @@
+/* Estilos gerais da página */
+body {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.dupla {
+    font-size: 14px;
+    color: #8d99ae;
+    margin-bottom: 20px;
+}
+
+/* Cartão principal centralizado */
+.cartao-jogo {
+    background-color: #16213e;
+    max-width: 500px;
+    margin: 0 auto; /* Centraliza o elemento na página */
+    padding: 30px;
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Título principal */
+.titulo-principal {
+    font-size: 28px;
+    color: #00fff5;
+    margin-top: 0;
+}
+
+/* Texto descritivo */
+.descricao {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Imagem */
+.imagem-jogo {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px; /* Cantos arredondados na imagem */
+    margin-bottom: 20px;
+}
+
+/* Campo de entrada */
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #00fff5;
+    background-color: #0f3460;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Botão interativo com efeito hover */
+.botao {
+    background-color: #e94560;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px 24px; /* Espaçamento interno */
+    border: none;
+    border-radius: 8px; /* Cantos arredondados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 10px;
+}
+
+/* Efeito :hover solicitado */
+.botao:hover {
+    background-color: #ff6b81;
+    transform: scale(1.05); /* Efeito visual ao passar o mouse */
+}
+
+/* Mensagem de resultado */
+#resultado {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}

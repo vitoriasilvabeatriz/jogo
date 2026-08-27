@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação - Dupla Lambert, Bueno e Beatriz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <p class="dupla">Projeto desenvolvido por: Lambert, Bueno e Beatriz</p>
+    </header>
+
+    <main class="cartao-jogo">
+        <h1 class="titulo-principal">Jogo do Número Secreto</h1>
+        
+        <p class="descricao">
+            Bem-vindo ao nosso jogo! O objetivo é tentar adivinhar o número secreto entre 1 e 10. 
+            Teste sua sorte e veja em quantas tentativas você consegue acertar!
+        </p>
+
+        <!-- Imagem relacionada ao jogo -->
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400" alt="Ilustração de jogo de adivinhação" class="imagem-jogo">
+
+        <div class="area-interativa">
+            <input type="number" id="chute" min="1" max="10" placeholder="Digite de 1 a 10">
+            <button class="botao" onclick="jogar()">Tentar Adivinhar</button>
+            <p id="resultado"></p>
+        </div>
+    </main>
+
+    <script>
+        // Lógica simples do jogo
+        const numeroSecreto = Math.floor(Math.random() * 10) + 1;
+
+        function jogar() {
+            const chute = parseInt(document.getElementById('chute').value);
+            const resultado = document.getElementById('resultado');
+
+            if (isNaN(chute) || chute < 1 || chute > 10) {
+                resultado.textContent = 'Por favor, insira um número entre 1 e 10!';
+                resultado.style.color = '#d9534f';
+            } else if (chute === numeroSecreto) {
+                resultado.textContent = 'Parabéns! Você acertou o número secreto! 🎉';
+                resultado.style.color = '#28a745';
+            } else if (chute < numeroSecreto) {
+                resultado.textContent = 'Tente um número maior! ⬆️';
+                resultado.style.color = '#ffc107';
+            } else {
+                resultado.textContent = 'Tente um número menor! ⬇️';
+                resultado.style.color = '#ffc107';
+            }
+        }
+    </script>
+
+</body>
+</html>
